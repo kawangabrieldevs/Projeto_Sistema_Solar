@@ -1,3 +1,9 @@
+   body{
+    height: 160vh;
+    background: url(../img/fundosaturno.jpg) center center no-repeat fixed ;
+    background-size: cover;
+   }
+
    .navbar-nav {
             gap: 25px;
         }
