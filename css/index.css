@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 header{
@@ -97,6 +98,15 @@ header{
    
 }
 
+h3 {
+    text-align: center;
+}
+
+.badge {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 20px;
+}
 
 
 .sobre-sistema{
