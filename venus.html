@@ -3,263 +3,702 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sol</title>
+    <title>Vênus</title>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: white;
+        }
+
+        .imagem {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+                url("img/FundoDeCadaPagina/fundovenus.jpg")
+                center center / cover no-repeat fixed;
+        }
+
+        .imagem h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px black;
+        }
+
+        .imagem h3 {
+            margin-top: 10px;
+        }
+
+        .imagem .badge {
+            padding: 10px 18px;
+            border-radius: 30px;
+        }
+
+        .conteudo-venus {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto;
+        }
+
+        .alert-venus {
+            background-color: rgba(15, 23, 42, 0.85);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+
+        .info-card {
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.85);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: 0.2s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .info-card .card-body {
+            text-align: center;
+        }
+
+        .info-card h5 {
+            margin-bottom: 15px;
+        }
+
+        .info-numero {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .accordion-item {
+            background-color: rgba(15, 23, 42, 0.85);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .accordion-button {
+            background-color: rgba(15, 23, 42, 0.85);
+            color: white;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(30, 41, 59, 0.9);
+            color: white;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            line-height: 1.8;
+        }
+
+        .venus {
+            margin-top: 70px;
+            padding: 40px;
+            background-color: rgba(15, 23, 42, 0.85);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .venus img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: auto;
+            border-radius: 18px;
+        }
+
+        .venus h2 {
+            margin-bottom: 25px;
+        }
+
+        .venus p {
+            color: #cccccc;
+            line-height: 1.8;
+        }
+
+        .comparacao {
+            margin-top: 70px;
+            padding: 40px;
+            background-color: rgba(15, 23, 42, 0.85);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparacao h2 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .progress {
+            height: 25px;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .curiosidade {
+            margin-top: 70px;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .curiosidade p {
+            color: #cccccc;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: rgba(242, 247, 247, 0.062);
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .navbar-nav {
+            gap: 25px;
+        }
+
+        .navbar-brand {
+            color: white !important;
+        }
+
+        .nav-link {
+            transition: 0.2s ease;
+            color: white !important;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        @media (min-width: 992px) {
+            .navbar-collapse {
+                justify-content: flex-start;
+            }
+
+            .navbar-nav {
+                margin-left: 40px;
+            }
+        }
+
+        footer {
+            width: 100%;
+            height: 5vh;
+            background-color: rgba(0, 0, 20, 0);
+            background-image: linear-gradient(
+                45deg,
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0.425),
+                rgba(0, 0, 0, 0)
+            );
+            margin-top: 100px;
+        }
+
+        footer p {
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .imagem {
+                background-attachment: scroll;
+            }
+
+            .venus,
+            .comparacao {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 
-<style>
-  
-    section{
-        height: 100%;
-    }
-   
-    .accordion{
-        width: 80%;
-        
-        margin: 50vh auto 0 auto;
-    
-    }
-    .s2{
-        height: 65vh;
-    }
-    .accordion-item{
-        background-color: rgba(15, 23, 42);color: white;
-    }
-    .accordion-button{
-        background-color: rgba(15, 23, 42);
-        color: white;
-    }
-    footer{
-        margin: 0;
-        padding: 0;
-    }
-    
-</style>
 <body>
-    <header>
-    
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-    
-                <!-- img home-->
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img
-                        src="img/icons8-solar-system-72.png"
-                        alt="Logo"
-                        width="30"
-                        height="24"
-                        class="d-inline-block me-2">Home</a>
-    
-                <!-- botao pra mobile-->
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Abrir menu"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                <!-- links do navbar -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-    
-                    <ul class="navbar-nav">
-    
-                        <li class="nav-item">
-                            <a class="nav-link " href="sol.html">Sol</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a class="nav-link" href="mercurio.html">Mercurio</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a class="nav-link" href="venus.html">Venus</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a class="nav-link" href="terra.html">Terra</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a class="nav-link" href="marte.html">Marte</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a class="nav-link" href="jupiter.html">Jupiter</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a class="nav-link" href="saturno.html">Saturno</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a class="nav-link" href="urano.html">Urano</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a class="nav-link" href="netuno.html">Netuno</a>
-                        </li>
-    
-                    </ul>
-    
-                </div>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="img/icons8-solar-system-72.png" width="30" height="24">
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sol.html">Sol</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="mercurio.html">Mercúrio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="venus.html">Vênus</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="terra.html">Terra</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="marte.html">Marte</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="jupiter.html">Júpiter</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="saturno.html">Saturno</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="urano.html">Urano</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="netuno.html">Netuno</a>
+                    </li>
+
+                </ul>
+
             </div>
-        </nav>
+
+        </div>
+
+    </nav>
+
 </header>
 
-    <section class="imagem" style="background: black url(img/FundoDeCadaPagina/fundovenus.jpg) center center no-repeat fixed; background-size: cover;">
-        <h1 style="text-align: center; color: white;
-        padding-top: 10vh;">Sol: a estrela do Sistema Solar</h1>
 
-                <h3><span class="badge text-bg-secondary">Rochoso</span></h3>
+<section class="imagem">
 
-        
+    <h1>Vênus: o planeta mais quente do Sistema Solar</h1>
+
+    <h3>
+
+        <span
+            class="badge text-bg-secondary"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            title="Vênus é classificado como um planeta rochoso.">
+
+            Planeta Rochoso
+
+        </span>
+
+    </h3>
+
+    <a href="#informacoes" class="btn btn-primary mt-4">
+        Explorar Vênus ↓
+    </a>
+
+</section>
+
+
+<div class="conteudo-venus" id="informacoes">
+
+    <div class="alert alert-venus">
+
+        <strong>Você sabia?</strong>
+
+        Vênus é o segundo planeta a partir do Sol e é o planeta mais quente
+        do Sistema Solar devido à sua atmosfera muito densa.
+
+    </div>
+
+
+    <div class="row g-4 mt-3">
+
+        <div class="col-md-4">
+
+            <div class="card info-card">
+
+                <div class="card-body">
+
+                    <h5>Posição</h5>
+
+                    <div class="info-numero">
+                        2º
+                    </div>
+
+                    <p>
+                        Vênus é o segundo planeta a partir do Sol.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="card info-card">
+
+                <div class="card-body">
+
+                    <h5>Tipo</h5>
+
+                    <div class="info-numero">
+                        Rochoso
+                    </div>
+
+                    <p>
+                        Vênus possui uma superfície sólida e rochosa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="card info-card">
+
+                <div class="card-body">
+
+                    <h5>Temperatura</h5>
+
+                    <div class="info-numero">
+                        ~465°C
+                    </div>
+
+                    <p>
+                        É o planeta mais quente do Sistema Solar.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="accordion mt-5" id="accordionVenus">
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#venus1">
+
+                    Características de Vênus
+
+                </button>
+
+            </h2>
+
+            <div id="venus1"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionVenus">
+
+                <div class="accordion-body">
+
+                    Vênus é um planeta rochoso e possui tamanho e composição
+                    semelhantes aos da Terra. Sua superfície apresenta
+                    montanhas, vulcões e muitas regiões cobertas por rochas.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#venus2">
+
+                    Do que Vênus é feito?
+
+                </button>
+
+            </h2>
+
+            <div id="venus2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionVenus">
+
+                <div class="accordion-body">
+
+                    Vênus possui uma superfície rochosa e uma atmosfera
+                    composta principalmente por dióxido de carbono.
+                    Também existem pequenas quantidades de outros gases.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#venus3">
+
+                    Por que Vênus é tão quente?
+
+                </button>
+
+            </h2>
+
+            <div id="venus3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionVenus">
+
+                <div class="accordion-body">
+
+                    A atmosfera de Vênus é extremamente densa e rica em
+                    dióxido de carbono. Ela provoca um forte efeito estufa,
+                    fazendo com que o calor fique preso próximo à superfície.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#venus4">
+
+                    Como é o dia em Vênus?
+
+                </button>
+
+            </h2>
+
+            <div id="venus4"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionVenus">
+
+                <div class="accordion-body">
+
+                    Vênus possui uma rotação muito lenta. Um dia em Vênus
+                    dura mais tempo do que um ano venusiano. Além disso,
+                    o planeta gira em sentido contrário ao da maioria dos
+                    planetas do Sistema Solar.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#venus5">
+
+                    Curiosidades sobre Vênus
+
+                </button>
+
+            </h2>
+
+            <div id="venus5"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionVenus">
+
+                <div class="accordion-body">
+
+                    Vênus pode ser visto facilmente no céu em determinados
+                    períodos, sendo conhecido popularmente como Estrela
+                    d'Alva quando aparece antes do nascer do Sol e como
+                    Estrela Vespertina quando aparece após o pôr do Sol.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <section class="venus">
+
+        <h2>Um planeta coberto por nuvens</h2>
+
+        <img
+            src="img/FundoDeCadaPagina/fundovenus.jpg"
+            alt="Vênus">
+
+        <p class="mt-4">
+
+            Vênus possui uma atmosfera extremamente espessa, formada
+            principalmente por dióxido de carbono, além de nuvens compostas
+            por ácido sulfúrico. Essas características fazem com que sua
+            superfície seja muito quente.
+
+        </p>
+
+        <p>
+
+            Apesar de ser o segundo planeta a partir do Sol, Vênus é mais
+            quente que Mercúrio. Isso acontece principalmente por causa do
+            intenso efeito estufa causado por sua atmosfera.
+
+        </p>
+
     </section>
 
-    <section class="s2">
-        <!-- accordion Sol -->
-        <div class="accordion" id="accordionSol">
-        
-          
-          <div class="accordion-item">
-        <h2 class="accordion-header"  id="tituloCaracteristicas" >
-          <button class="accordion-button" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#caracteristicas"
-            aria-expanded="true"
-            aria-controls="caracteristicas">
-             Características do Sol
-          </button>
-        </h2>
-        <div id="caracteristicas"
-          class="accordion-collapse collapse show"
-          aria-labelledby="tituloCaracteristicas"
-          data-bs-parent="#accordionSol">
-          <div class="accordion-body">
-            O Sol é uma estrela localizada no centro do Sistema Solar.
-            Ele possui aproximadamente 4,6 bilhões de anos e concentra
-            cerca de 99,8% de toda a massa do Sistema Solar.
-          </div>
+
+    <section class="comparacao">
+
+        <h2>Tamanho de Vênus</h2>
+
+        <p class="text-center">
+
+            O diâmetro de Vênus corresponde a aproximadamente 95% do
+            diâmetro da Terra, mostrando que os dois planetas possuem
+            tamanhos bastante parecidos.
+
+        </p>
+
+        <div class="progress mt-4">
+
+            <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 95%;"
+                aria-valuenow="95"
+                aria-valuemin="0"
+                aria-valuemax="100">
+
+                95% do diâmetro da Terra
+
+            </div>
+
         </div>
-          </div>
-        
-        
-         
-          <div class="accordion-item">
-        <h2 class="accordion-header" id="tituloComposicao">
-          <button class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#composicao"
-            aria-expanded="false"
-            aria-controls="composicao">
-             Do que o Sol é feito?
-          </button>
-        </h2>
-        <div id="composicao"
-          class="accordion-collapse collapse"
-          aria-labelledby="tituloComposicao"
-          data-bs-parent="#accordionSol">
-          <div class="accordion-body">
-            O Sol é composto principalmente por hidrogênio e hélio.
-            Em seu núcleo, ocorre a fusão nuclear, um processo que transforma
-            hidrogênio em hélio e libera uma enorme quantidade de energia.
-          </div>
-        </div>
-          </div>
-        
-        
-          
-          <div class="accordion-item">
-        <h2 class="accordion-header" id="tituloEstrutura">
-          <button class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#estrutura"
-            aria-expanded="false"
-            aria-controls="estrutura">
-             Estrutura do Sol
-          </button>
-        </h2>
-        <div id="estrutura"
-          class="accordion-collapse collapse"
-          aria-labelledby="tituloEstrutura"
-          data-bs-parent="#accordionSol">
-          <div class="accordion-body">
-            O Sol possui diferentes camadas. Entre elas estão o núcleo,
-            a zona radiativa, a zona convectiva, a fotosfera, a cromosfera
-            e a coroa solar. Cada região possui características e temperaturas
-            diferentes.
-          </div>
-        </div>
-          </div>
-        
-        
-         
-          <div class="accordion-item">
-        <h2 class="accordion-header" id="tituloImportancia">
-          <button class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#importancia"
-            aria-expanded="false"
-            aria-controls="importancia">
-             Por que o Sol é importante?
-          </button>
-        </h2>
-        <div id="importancia"
-          class="accordion-collapse collapse"
-          aria-labelledby="tituloImportancia"
-          data-bs-parent="#accordionSol">
-          <div class="accordion-body">
-            O Sol é essencial para a vida na Terra. Sua energia fornece luz
-            e calor, influencia o clima e permite a realização da fotossíntese
-            pelas plantas, processo fundamental para diversos ecossistemas.
-          </div>
-        </div>
-          </div>
-        
-        
-          
-          <div class="accordion-item">
-        <h2 class="accordion-header" id="tituloCuriosidades">
-          <button class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#curiosidades"
-            aria-expanded="false"
-            aria-controls="curiosidades">
-             Curiosidades sobre o Sol
-          </button>
-        </h2>
-        <div id="curiosidades"
-          class="accordion-collapse collapse"
-          aria-labelledby="tituloCuriosidades"
-          data-bs-parent="#accordionSol">
-          <div class="accordion-body">
-            A luz do Sol leva aproximadamente 8 minutos e 20 segundos para
-            chegar à Terra. Além disso, o Sol é tão grande que mais de
-            um milhão de planetas do tamanho da Terra poderiam caber em seu
-            interior.
-          </div>
-        </div>
-          </div>
-        
-        </div>
+
     </section>
 
-    
 
- <footer>
-        <p>Site criado por <a href="https://github.com/kawandev22" target="_blank">Kawan Rennan</a> | <a href="https://github.com/bielsanatana-dias" target="_blank">Gabriel Santana</a></p>
-    </footer>
+    <section class="curiosidade">
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+        <h2>Uma curiosidade interessante</h2>
+
+        <p>
+
+            Vênus é um dos objetos mais brilhantes que podemos observar
+            no céu depois do Sol e da Lua. Por isso, ele recebeu nomes
+            diferentes dependendo do momento em que aparece no céu.
+
+        </p>
+
+    </section>
+
+</div>
+
+
+<footer>
+
+    <p>
+        Sistema Solar — Trabalho escolar
+    </p>
+
+</footer>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+    const tooltipTriggerList =
+        document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+    [...tooltipTriggerList].map(
+        tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
+    );
+
+</script>
 
 </body>
 </html>

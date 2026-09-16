@@ -13,37 +13,264 @@
 
 <style>
 
-    section {
-        height: 100%;
+    html {
+        scroll-behavior: smooth;
     }
+
+    body {
+        color: white;
+    }
+
+    /* =========================
+       CAPA
+       ========================= */
+
+    .imagem {
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 120px 20px 60px;
+
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.65)),
+            url("img/FundoDeCadaPagina/fundojupiter.jpg")
+            center center / cover no-repeat fixed;
+    }
+
+    .imagem h1 {
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        margin-bottom: 20px;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .imagem h3 {
+        margin-top: 10px;
+    }
+
+    .imagem .badge {
+        padding: 10px 18px;
+        border-radius: 30px;
+    }
+
+
+    /* =========================
+       CONTEÚDO
+       ========================= */
+
+    .conteudo-jupiter {
+        width: 90%;
+        max-width: 1100px;
+        margin: 60px auto;
+    }
+
+
+    /* =========================
+       ALERT
+       ========================= */
+
+    .alert-jupiter {
+        background-color: rgba(15, 23, 42, 0.9);
+        color: white;
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        border-radius: 15px;
+    }
+
+
+    /* =========================
+       CARDS DE INFORMAÇÃO
+       ========================= */
+
+    .info-card {
+        height: 100%;
+
+        background-color: rgba(15, 23, 42, 0.88);
+        color: white;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        border-radius: 18px;
+
+        transition: 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .info-card .card-body {
+        text-align: center;
+    }
+
+    .info-card h5 {
+        margin-bottom: 15px;
+    }
+
+    .info-numero {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+
+    /* =========================
+       ACCORDION
+       ========================= */
 
     .accordion {
-        width: 80%;
-        margin: 50vh auto 0 auto;
-    }
-
-    .s2 {
-        height: 65vh;
+        margin-top: 50px;
     }
 
     .accordion-item {
-        background-color: rgba(15, 23, 42);
+        background-color: rgba(15, 23, 42, 0.95);
         color: white;
+
+        border-color: rgba(255, 255, 255, 0.1);
     }
 
     .accordion-button {
-        background-color: rgba(15, 23, 42);
+        background-color: rgba(15, 23, 42, 0.95);
         color: white;
     }
 
-    footer {
-        margin: 0;
-        padding: 0;
+    .accordion-button:not(.collapsed) {
+        background-color: rgba(30, 41, 59, 0.95);
+        color: white;
+
+        box-shadow: none;
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+    }
+
+    .accordion-body {
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       MANCHA VERMELHA
+       ========================= */
+
+    .mancha {
+        margin-top: 70px;
+
+        padding: 40px;
+
+        background-color: rgba(15, 23, 42, 0.88);
+
+        border-radius: 20px;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mancha img {
+        width: 100%;
+        max-width: 500px;
+
+        border-radius: 18px;
+
+        display: block;
+        margin: 0 auto;
+    }
+
+    .mancha h2 {
+        margin-bottom: 20px;
+    }
+
+    .mancha p {
+        color: #d1d5db;
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       PROGRESS BAR
+       ========================= */
+
+    .comparacao {
+        margin-top: 70px;
+
+        padding: 40px;
+
+        background-color: rgba(15, 23, 42, 0.88);
+
+        border-radius: 20px;
+    }
+
+    .comparacao h2 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .progress {
+        height: 25px;
+
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+
+
+    /* =========================
+       CURIOSIDADE
+       ========================= */
+
+    .curiosidade {
+        margin-top: 70px;
+
+        text-align: center;
+
+        padding: 50px 20px;
+    }
+
+    .curiosidade p {
+        color: #d1d5db;
+        max-width: 700px;
+        margin: 20px auto;
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       TOAST
+       ========================= */
+
+    .toast {
+        background-color: rgba(15, 23, 42, 0.95);
+        color: white;
+    }
+
+
+    /* =========================
+       RESPONSIVIDADE
+       ========================= */
+
+    @media (max-width: 768px) {
+
+        .imagem {
+            background-attachment: scroll;
+        }
+
+        .mancha,
+        .comparacao {
+            padding: 25px;
+        }
+
     }
 
 </style>
 
 <body>
+
+    <!-- =========================
+         NAVBAR
+         ========================= -->
 
     <header>
 
@@ -51,7 +278,6 @@
 
             <div class="container-fluid">
 
-                <!-- img home -->
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
 
                     <img
@@ -65,7 +291,7 @@
 
                 </a>
 
-                <!-- botão para mobile -->
+
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -79,7 +305,7 @@
 
                 </button>
 
-                <!-- links do navbar -->
+
                 <div class="collapse navbar-collapse" id="navbarNav">
 
                     <ul class="navbar-nav">
@@ -105,7 +331,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="jupiter.html">Júpiter</a>
+                            <a class="nav-link active" href="jupiter.html">Júpiter</a>
                         </li>
 
                         <li class="nav-item">
@@ -131,36 +357,151 @@
     </header>
 
 
-    <section class="imagem" style="background: black url(img/FundoDeCadaPagina/fundojupiter.jpg) center center no-repeat fixed; background-size: cover;">
+    <!-- =========================
+         CAPA
+         ========================= -->
 
-        <h1 style="text-align: center; color: white; padding-top: 10vh;">
-            Júpiter: o maior planeta do Sistema Solar
-        </h1>
+    <section class="imagem">
 
-        <!-- bredge -->
-        <h3><span class="badge text-bg-secondary">Gigante Gasoso</span></h3>
+        <h1>Júpiter: o maior planeta do Sistema Solar</h1>
+
+        <h3>
+
+            <span
+                class="badge text-bg-secondary"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Júpiter é classificado como um gigante gasoso.">
+
+                Gigante Gasoso
+
+            </span>
+
+        </h3>
+
+        <a href="#informacoes" class="btn btn-primary mt-4">
+            Explorar Júpiter ↓
+        </a>
 
     </section>
 
 
-    <section class="s2">
+    <div class="conteudo-jupiter" id="informacoes">
 
-        <!-- accordion Júpiter -->
+
+        <!-- =========================
+             ALERT
+             ========================= -->
+
+        <div class="alert alert-jupiter" role="alert">
+
+            <strong>Você sabia?</strong>
+
+            Júpiter é o maior planeta do Sistema Solar e possui uma
+            atmosfera composta principalmente por hidrogênio e hélio.
+
+        </div>
+
+
+        <!-- =========================
+             CARDS
+             ========================= -->
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-4">
+
+                <div class="card info-card">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Posição
+                        </h5>
+
+                        <div class="info-numero">
+                            5º
+                        </div>
+
+                        <p class="card-text">
+                            Júpiter é o quinto planeta a partir do Sol.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card info-card">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Tipo
+                        </h5>
+
+                        <div class="info-numero">
+                            Gasoso
+                        </div>
+
+                        <p class="card-text">
+                            Júpiter é um gigante gasoso.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card info-card">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Grandeza
+                        </h5>
+
+                        <div class="info-numero">
+                            Maior
+                        </div>
+
+                        <p class="card-text">
+                            É o maior planeta do Sistema Solar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ACCORDION
+             ========================= -->
+
         <div class="accordion" id="accordionJupiter">
 
 
-            <!-- CARACTERÍSTICAS -->
             <div class="accordion-item">
 
-                <h2 class="accordion-header" id="tituloCaracteristicas">
+                <h2 class="accordion-header">
 
                     <button
                         class="accordion-button"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#caracteristicas"
-                        aria-expanded="true"
-                        aria-controls="caracteristicas">
+                        data-bs-target="#caracteristicas">
 
                         Características de Júpiter
 
@@ -171,15 +512,13 @@
                 <div
                     id="caracteristicas"
                     class="accordion-collapse collapse show"
-                    aria-labelledby="tituloCaracteristicas"
                     data-bs-parent="#accordionJupiter">
 
                     <div class="accordion-body">
 
-                        Júpiter é o maior planeta do Sistema Solar e está
-                        localizado em quinto lugar a partir do Sol. É um
-                        gigante gasoso e possui um diâmetro muito maior que
-                        o da Terra.
+                        Júpiter é o maior planeta do Sistema Solar.
+                        Ele possui uma atmosfera muito extensa e não
+                        apresenta uma superfície sólida como a Terra.
 
                     </div>
 
@@ -188,18 +527,15 @@
             </div>
 
 
-            <!-- COMPOSIÇÃO -->
             <div class="accordion-item">
 
-                <h2 class="accordion-header" id="tituloComposicao">
+                <h2 class="accordion-header">
 
                     <button
                         class="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#composicao"
-                        aria-expanded="false"
-                        aria-controls="composicao">
+                        data-bs-target="#composicao">
 
                         Do que Júpiter é feito?
 
@@ -210,14 +546,13 @@
                 <div
                     id="composicao"
                     class="accordion-collapse collapse"
-                    aria-labelledby="tituloComposicao"
                     data-bs-parent="#accordionJupiter">
 
                     <div class="accordion-body">
 
-                        Júpiter é formado principalmente por hidrogênio e
-                        hélio. Por ser um gigante gasoso, ele não possui
-                        uma superfície sólida como a Terra ou Marte.
+                        Júpiter é composto principalmente por hidrogênio
+                        e hélio. Em seu interior, a pressão e a temperatura
+                        aumentam bastante conforme a profundidade.
 
                     </div>
 
@@ -226,20 +561,17 @@
             </div>
 
 
-            <!-- ATMOSFERA -->
             <div class="accordion-item">
 
-                <h2 class="accordion-header" id="tituloAtmosfera">
+                <h2 class="accordion-header">
 
                     <button
                         class="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#atmosfera"
-                        aria-expanded="false"
-                        aria-controls="atmosfera">
+                        data-bs-target="#atmosfera">
 
-                        Como é a atmosfera de Júpiter?
+                        Como é a atmosfera?
 
                     </button>
 
@@ -248,14 +580,12 @@
                 <div
                     id="atmosfera"
                     class="accordion-collapse collapse"
-                    aria-labelledby="tituloAtmosfera"
                     data-bs-parent="#accordionJupiter">
 
                     <div class="accordion-body">
 
-                        A atmosfera de Júpiter possui faixas de nuvens
-                        coloridas formadas por diferentes gases. Nela também
-                        acontecem tempestades muito intensas.
+                        A atmosfera apresenta faixas de nuvens claras e
+                        escuras, além de fortes ventos e grandes tempestades.
 
                     </div>
 
@@ -264,36 +594,31 @@
             </div>
 
 
-            <!-- GRANDE MANCHA VERMELHA -->
             <div class="accordion-item">
 
-                <h2 class="accordion-header" id="tituloMancha">
+                <h2 class="accordion-header">
 
                     <button
                         class="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#mancha"
-                        aria-expanded="false"
-                        aria-controls="mancha">
+                        data-bs-target="#luas">
 
-                        O que é a Grande Mancha Vermelha?
+                        Luas de Júpiter
 
                     </button>
 
                 </h2>
 
                 <div
-                    id="mancha"
+                    id="luas"
                     class="accordion-collapse collapse"
-                    aria-labelledby="tituloMancha"
                     data-bs-parent="#accordionJupiter">
 
                     <div class="accordion-body">
 
-                        A Grande Mancha Vermelha é uma enorme tempestade
-                        localizada na atmosfera de Júpiter. Ela existe há
-                        séculos e possui tamanho maior que o da Terra.
+                        Júpiter possui muitas luas. Entre as mais conhecidas
+                        estão Io, Europa, Ganimedes e Calisto.
 
                     </div>
 
@@ -301,60 +626,110 @@
 
             </div>
 
-
-            <!-- CURIOSIDADES -->
-            <div class="accordion-item">
-
-                <h2 class="accordion-header" id="tituloCuriosidades">
-
-                    <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#curiosidades"
-                        aria-expanded="false"
-                        aria-controls="curiosidades">
-
-                        Curiosidades sobre Júpiter
-
-                    </button>
-
-                </h2>
-
-                <div
-                    id="curiosidades"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="tituloCuriosidades"
-                    data-bs-parent="#accordionJupiter">
-
-                    <div class="accordion-body">
-
-                        Júpiter possui dezenas de luas, sendo algumas das
-                        mais conhecidas Io, Europa, Ganimedes e Calisto.
-                        Ganimedes é a maior lua conhecida do Sistema Solar.
-
-                    </div>
-
-                </div>
-
-            </div>
 
         </div>
 
-    </section>
 
+        <!-- =========================
+             GRANDE MANCHA VERMELHA
+             ========================= -->
+
+        <section class="mancha">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-md-6">
+
+                    <img
+                        src="img/FundoDeCadaPagina/fundojupiter.jpg"
+                        alt="Júpiter">
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <h2>Grande Mancha Vermelha</h2>
+
+                    <p>
+                        Uma das características mais conhecidas de Júpiter
+                        é a Grande Mancha Vermelha, uma enorme tempestade
+                        localizada em sua atmosfera.
+                    </p>
+
+                    <p>
+                        Ela se destaca pela sua coloração e pelo tamanho
+                        impressionante da tempestade.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROGRESS BAR
+             ========================= -->
+
+        <section class="comparacao">
+
+            <h2>Dimensão de Júpiter</h2>
+
+            <p>
+                1000 terras caberiam dentro de Júpiter, o que mostra o quão grande ele é em comparação com a Terra. 
+            </p>
+
+            <div class="mb-3">
+                <strong>Júpiter</strong>
+            </div>
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 76%;"
+                    aria-valuenow="76"
+                    aria-valuemin="0"
+                    aria-valuemax="100">
+
+                    76% De seu tamnho total!!!
+
+                </div>
+
+            </div>
+
+        </section>
+    <!-- =========================
+         FOOTER
+         ========================= -->
 
     <footer>
 
         <p>
+
             Site criado por
-            <a href="https://github.com/kawandev22" target="_blank">
+
+            <a
+                href="https://github.com/kawandev22"
+                target="_blank">
+
                 Kawan Rennan
+
             </a>
+
             |
-            <a href="https://github.com/bielsanatana-dias" target="_blank">
+
+            <a
+                href="https://github.com/bielsanatana-dias"
+                target="_blank">
+
                 Gabriel Santana
+
             </a>
+
         </p>
 
     </footer>
@@ -362,7 +737,40 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
 
+
+    <!-- TOOLTIP -->
+    <script>
+
+        const tooltipTriggerList =
+            document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+        [...tooltipTriggerList].map(
+            tooltipTriggerEl =>
+                new bootstrap.Tooltip(tooltipTriggerEl)
+        );
+
+    </script>
+
+
+    <!-- TOAST -->
+    <script>
+
+        const toastElement =
+            document.getElementById('toastJupiter');
+
+        const toast =
+            new bootstrap.Toast(toastElement);
+
+        document
+            .getElementById('btnCuriosidade')
+            .addEventListener('click', function () {
+
+                toast.show();
+
+            });
+
+    </script>
+
 </body>
 
 </html>
-```
