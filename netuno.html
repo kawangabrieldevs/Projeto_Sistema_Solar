@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netuno</title>
+    <title>Sol</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
+
+<style>
+  
+    section{
+        height: 100%;
+    }
+   
+    .accordion{
+        width: 80%;
+        
+        margin: 50vh auto 0 auto;
+    
+    }
+    .s2{
+        height: 65vh;
+    }
+    .accordion-item{
+        background-color: rgba(15, 23, 42);color: white;
+    }
+    .accordion-button{
+        background-color: rgba(15, 23, 42);
+        color: white;
+    }
+    footer{
+        margin: 0;
+        padding: 0;
+    }
+    
+</style>
 <body>
     <header>
     
@@ -82,6 +111,146 @@
             </div>
         </nav>
 </header>
+
+    <section class="imagem" style="background: black url(img/fundonetuno.jpg) center center no-repeat fixed; background-size: cover;">
+        <h1 style="text-align: center; color: white;
+        padding-top: 10vh;">Sol: a estrela do Sistema Solar</h1>
+        
+    </section>
+
+    <section class="s2">
+        <!-- accordion Sol -->
+        <div class="accordion" id="accordionSol">
+        
+          
+          <div class="accordion-item">
+        <h2 class="accordion-header"  id="tituloCaracteristicas" >
+          <button class="accordion-button" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#caracteristicas"
+            aria-expanded="true"
+            aria-controls="caracteristicas">
+             Características do Sol
+          </button>
+        </h2>
+        <div id="caracteristicas"
+          class="accordion-collapse collapse show"
+          aria-labelledby="tituloCaracteristicas"
+          data-bs-parent="#accordionSol">
+          <div class="accordion-body">
+            O Sol é uma estrela localizada no centro do Sistema Solar.
+            Ele possui aproximadamente 4,6 bilhões de anos e concentra
+            cerca de 99,8% de toda a massa do Sistema Solar.
+          </div>
+        </div>
+          </div>
+        
+        
+         
+          <div class="accordion-item">
+        <h2 class="accordion-header" id="tituloComposicao">
+          <button class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#composicao"
+            aria-expanded="false"
+            aria-controls="composicao">
+             Do que o Sol é feito?
+          </button>
+        </h2>
+        <div id="composicao"
+          class="accordion-collapse collapse"
+          aria-labelledby="tituloComposicao"
+          data-bs-parent="#accordionSol">
+          <div class="accordion-body">
+            O Sol é composto principalmente por hidrogênio e hélio.
+            Em seu núcleo, ocorre a fusão nuclear, um processo que transforma
+            hidrogênio em hélio e libera uma enorme quantidade de energia.
+          </div>
+        </div>
+          </div>
+        
+        
+          
+          <div class="accordion-item">
+        <h2 class="accordion-header" id="tituloEstrutura">
+          <button class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#estrutura"
+            aria-expanded="false"
+            aria-controls="estrutura">
+             Estrutura do Sol
+          </button>
+        </h2>
+        <div id="estrutura"
+          class="accordion-collapse collapse"
+          aria-labelledby="tituloEstrutura"
+          data-bs-parent="#accordionSol">
+          <div class="accordion-body">
+            O Sol possui diferentes camadas. Entre elas estão o núcleo,
+            a zona radiativa, a zona convectiva, a fotosfera, a cromosfera
+            e a coroa solar. Cada região possui características e temperaturas
+            diferentes.
+          </div>
+        </div>
+          </div>
+        
+        
+         
+          <div class="accordion-item">
+        <h2 class="accordion-header" id="tituloImportancia">
+          <button class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#importancia"
+            aria-expanded="false"
+            aria-controls="importancia">
+             Por que o Sol é importante?
+          </button>
+        </h2>
+        <div id="importancia"
+          class="accordion-collapse collapse"
+          aria-labelledby="tituloImportancia"
+          data-bs-parent="#accordionSol">
+          <div class="accordion-body">
+            O Sol é essencial para a vida na Terra. Sua energia fornece luz
+            e calor, influencia o clima e permite a realização da fotossíntese
+            pelas plantas, processo fundamental para diversos ecossistemas.
+          </div>
+        </div>
+          </div>
+        
+        
+          
+          <div class="accordion-item">
+        <h2 class="accordion-header" id="tituloCuriosidades">
+          <button class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#curiosidades"
+            aria-expanded="false"
+            aria-controls="curiosidades">
+             Curiosidades sobre o Sol
+          </button>
+        </h2>
+        <div id="curiosidades"
+          class="accordion-collapse collapse"
+          aria-labelledby="tituloCuriosidades"
+          data-bs-parent="#accordionSol">
+          <div class="accordion-body">
+            A luz do Sol leva aproximadamente 8 minutos e 20 segundos para
+            chegar à Terra. Além disso, o Sol é tão grande que mais de
+            um milhão de planetas do tamanho da Terra poderiam caber em seu
+            interior.
+          </div>
+        </div>
+          </div>
+        
+        </div>
+    </section>
+
+    
 
  <footer>
         <p>Site criado por <a href="https://github.com/kawandev22" target="_blank">Kawan Rennan</a> | <a href="https://github.com/bielsanatana-dias" target="_blank">Gabriel Santana</a></p>

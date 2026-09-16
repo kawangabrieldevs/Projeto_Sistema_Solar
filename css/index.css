@@ -19,7 +19,7 @@ header{
    
    body{
     
-    background: url(../img/ChatGPT\ Image\ 28\ de\ ago.\ de\ 2026\,\ 14_14_52.png) center center no-repeat fixed ;
+    background: url(../img/FundoPrincipal.png) center center no-repeat fixed ;
     background-size: cover;
     
     
@@ -91,12 +91,12 @@ header{
 .imagem{
     
     height: 100vh;
-    background: black url(../img/fundocardsol.jpg) center center no-repeat fixed;
     background-size: cover;
     margin: auto;
     border-radius: 5px;
    
 }
+
 
 
 .sobre-sistema{

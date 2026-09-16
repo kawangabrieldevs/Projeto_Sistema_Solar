@@ -1,28 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jupiter</title>
+
+    <title>Júpiter</title>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
+
+<style>
+
+    section {
+        height: 100%;
+    }
+
+    .accordion {
+        width: 80%;
+        margin: 50vh auto 0 auto;
+    }
+
+    .s2 {
+        height: 65vh;
+    }
+
+    .accordion-item {
+        background-color: rgba(15, 23, 42);
+        color: white;
+    }
+
+    .accordion-button {
+        background-color: rgba(15, 23, 42);
+        color: white;
+    }
+
+    footer {
+        margin: 0;
+        padding: 0;
+    }
+
+</style>
+
 <body>
+
     <header>
-    
-        <nav class="navbar navbar-expand-lg ">
+
+        <nav class="navbar navbar-expand-lg">
+
             <div class="container-fluid">
-    
-                <!-- img home-->
+
+                <!-- img home -->
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
+
                     <img
                         src="img/icons8-solar-system-72.png"
                         alt="Logo"
                         width="30"
                         height="24"
-                        class="d-inline-block me-2">Home</a>
-    
-                <!-- botao pra mobile-->
+                        class="d-inline-block me-2">
+
+                    Home
+
+                </a>
+
+                <!-- botão para mobile -->
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -30,64 +73,293 @@
                     data-bs-target="#navbarNav"
                     aria-controls="navbarNav"
                     aria-expanded="false"
-                    aria-label="Abrir menu"
-                >
+                    aria-label="Abrir menu">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
-    
+
                 <!-- links do navbar -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-    
+
                     <ul class="navbar-nav">
-    
+
                         <li class="nav-item">
-                            <a class="nav-link " href="sol.html">Sol</a>
+                            <a class="nav-link" href="sol.html">Sol</a>
                         </li>
-    
+
                         <li class="nav-item">
-                            <a class="nav-link" href="mercurio.html">Mercurio</a>
+                            <a class="nav-link" href="mercurio.html">Mercúrio</a>
                         </li>
-    
+
                         <li class="nav-item">
-                            <a class="nav-link" href="venus.html">Venus</a>
+                            <a class="nav-link" href="venus.html">Vênus</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="terra.html">Terra</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="marte.html">Marte</a>
                         </li>
-    
+
                         <li class="nav-item">
-                            <a class="nav-link" href="jupiter.html">Jupiter</a>
+                            <a class="nav-link" href="jupiter.html">Júpiter</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="saturno.html">Saturno</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="urano.html">Urano</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="netuno.html">Netuno</a>
                         </li>
-    
-                    </ul>
-    
-                </div>
-            </div>
-        </nav>
-</header>
 
- <footer>
-        <p>Site criado por <a href="https://github.com/kawandev22" target="_blank">Kawan Rennan</a> | <a href="https://github.com/bielsanatana-dias" target="_blank">Gabriel Santana</a></p>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <section class="imagem" style="background: black url(img/fundojupiter.webp) center center no-repeat fixed; background-size: cover;">
+
+        <h1 style="text-align: center; color: white; padding-top: 10vh;">
+            Júpiter: o maior planeta do Sistema Solar
+        </h1>
+
+    </section>
+
+
+    <section class="s2">
+
+        <!-- accordion Júpiter -->
+        <div class="accordion" id="accordionJupiter">
+
+
+            <!-- CARACTERÍSTICAS -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header" id="tituloCaracteristicas">
+
+                    <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#caracteristicas"
+                        aria-expanded="true"
+                        aria-controls="caracteristicas">
+
+                        Características de Júpiter
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="caracteristicas"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="tituloCaracteristicas"
+                    data-bs-parent="#accordionJupiter">
+
+                    <div class="accordion-body">
+
+                        Júpiter é o maior planeta do Sistema Solar e está
+                        localizado em quinto lugar a partir do Sol. É um
+                        gigante gasoso e possui um diâmetro muito maior que
+                        o da Terra.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPOSIÇÃO -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header" id="tituloComposicao">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#composicao"
+                        aria-expanded="false"
+                        aria-controls="composicao">
+
+                        Do que Júpiter é feito?
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="composicao"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="tituloComposicao"
+                    data-bs-parent="#accordionJupiter">
+
+                    <div class="accordion-body">
+
+                        Júpiter é formado principalmente por hidrogênio e
+                        hélio. Por ser um gigante gasoso, ele não possui
+                        uma superfície sólida como a Terra ou Marte.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ATMOSFERA -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header" id="tituloAtmosfera">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#atmosfera"
+                        aria-expanded="false"
+                        aria-controls="atmosfera">
+
+                        Como é a atmosfera de Júpiter?
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="atmosfera"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="tituloAtmosfera"
+                    data-bs-parent="#accordionJupiter">
+
+                    <div class="accordion-body">
+
+                        A atmosfera de Júpiter possui faixas de nuvens
+                        coloridas formadas por diferentes gases. Nela também
+                        acontecem tempestades muito intensas.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GRANDE MANCHA VERMELHA -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header" id="tituloMancha">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mancha"
+                        aria-expanded="false"
+                        aria-controls="mancha">
+
+                        O que é a Grande Mancha Vermelha?
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="mancha"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="tituloMancha"
+                    data-bs-parent="#accordionJupiter">
+
+                    <div class="accordion-body">
+
+                        A Grande Mancha Vermelha é uma enorme tempestade
+                        localizada na atmosfera de Júpiter. Ela existe há
+                        séculos e possui tamanho maior que o da Terra.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CURIOSIDADES -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header" id="tituloCuriosidades">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#curiosidades"
+                        aria-expanded="false"
+                        aria-controls="curiosidades">
+
+                        Curiosidades sobre Júpiter
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="curiosidades"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="tituloCuriosidades"
+                    data-bs-parent="#accordionJupiter">
+
+                    <div class="accordion-body">
+
+                        Júpiter possui dezenas de luas, sendo algumas das
+                        mais conhecidas Io, Europa, Ganimedes e Calisto.
+                        Ganimedes é a maior lua conhecida do Sistema Solar.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            Site criado por
+            <a href="https://github.com/kawandev22" target="_blank">
+                Kawan Rennan
+            </a>
+            |
+            <a href="https://github.com/bielsanatana-dias" target="_blank">
+                Gabriel Santana
+            </a>
+        </p>
+
     </footer>
+
 
     <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
+```
