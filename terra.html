@@ -72,13 +72,40 @@
 
     .carousel {
         margin-bottom: 50px;
+        overflow: hidden;
+        border-radius: 20px;
     }
 
-    .carousel img {
-        width: 100%;
+    .carousel-inner,
+    .carousel-item {
         height: 500px;
-        object-fit: cover;
-        border-radius: 20px;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .carousel-caption {
+        right: 8%;
+        bottom: 20px;
+        left: 8%;
+        padding: 14px 18px;
+        background: rgba(0, 0, 0, 0.72);
+        border-radius: 12px;
+        text-align: left;
+    }
+
+    .carousel-caption h5,
+    .carousel-caption p {
+        margin: 0;
+    }
+
+    .carousel-caption p {
+        margin-top: 6px;
+        line-height: 1.5;
     }
 
 
@@ -250,7 +277,8 @@
             padding: 25px;
         }
 
-        .carousel img {
+        .carousel-inner,
+        .carousel-item {
             height: 300px;
         }
 
@@ -420,9 +448,15 @@
                 <div class="carousel-item active">
 
                     <img
-                        src="img/FundoDeCadaPagina/fundoterra.jpg"
+                        src="img/carrosel/apollo17blue_marble17-12-1972.webp" 
                         class="d-block w-100"
                         alt="Planeta Terra">
+
+                    <div class="carousel-caption">
+                        <h5>Apollo 17: Blue Marble 17/12/1972</h5>
+                        <p>Esta imagem foi tirada pela tripulação da missão final Apollo enquanto eles faziam o seu caminho para a Lua.
+</p>
+                    </div>
 
                 </div>
 
@@ -430,19 +464,29 @@
                 <div class="carousel-item">
 
                     <img
-                        src="img/FundoDeCadaPagina/fundoterra2.jpg"
+                        src="img/carrosel/vistaapollo17_07-12-1972.webp"
                         class="d-block w-100"
                         alt="Terra vista do espaço">
 
+                    <div class="carousel-caption">
+                        <h5>Vista da apollo 17 07/12/1972</h5>
+                        <p>A tripulação da Apollo 17 pegou essa vvisão do nosso planeta natal enquanto viajavam para a lua em 7 de dezembro de 1972.</p>
+                    </div>
+
                 </div>
 
 
                 <div class="carousel-item">
 
                     <img
-                        src="img/FundoDeCadaPagina/fundoterra3.jpg"
+                        src="img/carrosel/blue_marbel50anosdepois7-12-2022.png"
                         class="d-block w-100"
                         alt="Planeta Terra">
+
+                    <div class="carousel-caption">
+                        <h5>Blue Marble 50 anos depois 07/12/2022</h5>
+                        <p>Imagem capturada pelo instrumento EPIC no satélite DSCOVR, mostram a Terra 50 anos depois da famosa fotografia "Blue Marble" tirada pela missão Apollo 17 em 1972. </p>
+                    </div>
 
                 </div>
 
